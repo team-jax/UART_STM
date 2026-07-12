@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"node ~/.claude/plugins/cache/omc/oh-my-claudecode/4.14.7/bin/oh-my-claudecode.js ultragoal checkpoint --goal-id G001-firmware-build --status complete \\\\\\n  --evidence \\\"pio run SUCCESS (ex...",
+  "error": "Exit code 1\n[ultragoal] Claude goal snapshot is absent or reports no active goal; ask the active Claude agent to share the current /goal condition and pass its JSON with --claude-goal-json.",
+  "timestamp": "2026-07-12T16:39:54.984Z",
+  "retry_count": 1
+}

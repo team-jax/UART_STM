@@ -1,0 +1,13 @@
+{
+  "name": "Middlewares",
+  "build": {
+    "srcFilter": [
+      "+<*>",
+      "-<Third_Party/FreeRTOS/Source/portable/IAR/**>",
+      "-<Third_Party/FreeRTOS/Source/portable/MemMang/heap_1.c>",
+      "-<Third_Party/FreeRTOS/Source/portable/MemMang/heap_2.c>",
+      "-<Third_Party/FreeRTOS/Source/portable/MemMang/heap_3.c>",
+      "-<Third_Party/FreeRTOS/Source/portable/MemMang/heap_5.c>"
+    ]
+  }
+}

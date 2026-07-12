@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "createdAt": "2026-07-12T16:39:31.503Z",
+  "updatedAt": "2026-07-12T16:40:22.766Z",
+  "briefPath": ".omc/ultragoal/brief.md",
+  "goalsPath": ".omc/ultragoal/goals.json",
+  "ledgerPath": ".omc/ultragoal/ledger.jsonl",
+  "claudeGoalMode": "aggregate",
+  "goals": [
+    {
+      "id": "G001-firmware-build",
+      "title": "Firmware build",
+      "objective": "STEP 1 — Gesture-enabled main.c builds with 0 errors via pio run",
+      "status": "complete",
+      "attempt": 1,
+      "createdAt": "2026-07-12T16:39:31.503Z",
+      "updatedAt": "2026-07-12T16:40:22.651Z",
+      "startedAt": "2026-07-12T16:39:40.710Z",
+      "completedAt": "2026-07-12T16:40:22.651Z",
+      "evidence": "pio run SUCCESS (exit 0), no warnings. RAM 17.0% / Flash 2.8%. Gesture support implemented in src/main.c: GESTURE_CMD_ID 0xF0 accepted in UART ISR, PWM_Control_Task drives 6 finger channels (TIM3 CH1-4, TIM4 CH1-2); GRIP=30deg, OPEN=180deg."
+    },
+    {
+      "id": "G002-hardware-setup",
+      "title": "Hardware setup",
+      "objective": "STEP 2-3 — External servo power + common GND verified, firmware flashed, USB-UART terminal connected (115200 8-N-1 HEX)",
+      "status": "in_progress",
+      "attempt": 1,
+      "createdAt": "2026-07-12T16:39:31.503Z",
+      "updatedAt": "2026-07-12T16:40:22.766Z",
+      "startedAt": "2026-07-12T16:40:22.766Z"
+    },
+    {
+      "id": "G003-gesture-test",
+      "title": "Gesture test",
+      "objective": "STEP 4 — GRIP (AA F0 00 01 F1) and OPEN (AA F0 00 00 F0) drive all 6 finger servos; mirror-assembly decision made (STEP 4-1 applied if needed)",
+      "status": "pending",
+      "attempt": 0,
+      "createdAt": "2026-07-12T16:39:31.503Z",
+      "updatedAt": "2026-07-12T16:39:31.503Z"
+    },
+    {
+      "id": "G004-regression-test",
+      "title": "Regression test",
+      "objective": "STEP 5 — Individual servo commands still work and bad-checksum frames are rejected",
+      "status": "pending",
+      "attempt": 0,
+      "createdAt": "2026-07-12T16:39:31.503Z",
+      "updatedAt": "2026-07-12T16:39:31.503Z"
+    },
+    {
+      "id": "G005-calibration",
+      "title": "Calibration",
+      "objective": "STEP 6 — FINGER_OPEN_ANGLE / FINGER_GRIP_ANGLE tuned to real hardware, rebuilt and re-verified",
+      "status": "pending",
+      "attempt": 0,
+      "createdAt": "2026-07-12T16:39:31.503Z",
+      "updatedAt": "2026-07-12T16:39:31.503Z"
+    },
+    {
+      "id": "G006-final-verification",
+      "title": "Final verification",
+      "objective": "STEP 7 — USART1 IRQ priority vs configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY checked, boot pose decided, task stack high-water measured",
+      "status": "pending",
+      "attempt": 0,
+      "createdAt": "2026-07-12T16:39:31.503Z",
+      "updatedAt": "2026-07-12T16:39:31.503Z"
+    }
+  ],
+  "claudeObjective": "Complete all ultragoal stories in .omc/ultragoal/goals.json: G001-firmware-build Firmware build; G002-hardware-setup Hardware setup; G003-gesture-test Gesture test; G004-regression-test Regression test; G005-calibration Calibration; G006-final-verification Final verification",
+  "activeGoalId": "G002-hardware-setup"
+}
