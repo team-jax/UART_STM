@@ -9,7 +9,7 @@
     s / S : 각도 -5° / -1°
     o     : 지금 위치를 "펴기(OPEN)" 각도로 저장
     g     : 지금 위치를 "쥐기(GRIP)" 각도로 저장
-    1~6   : 손가락 선택 (1=F1_A 2=F1_B 3=F2_A 4=F2_B 5=F3_A 6=F3_B)
+    1~7   : 손가락 선택 (1=F1_A 2=F1_B 3=F2_A 4=F2_B 5=F3_A 6=F3_B 7=FINGER_ROT)
     n / p : 다음 / 이전 손가락
     h     : 모든 손가락을 저장된 OPEN 위치로 (정렬 확인용)
     q     : 종료 → 저장값 출력, main.c 반영/플래시 여부 질문
@@ -42,6 +42,10 @@ FINGERS = [
     ("FINGER2_B", "PB1", "&htim3", "TIM_CHANNEL_4", 0x40000440),
     ("FINGER3_A", "PB6", "&htim4", "TIM_CHANNEL_1", 0x40000834),
     ("FINGER3_B", "PB7", "&htim4", "TIM_CHANNEL_2", 0x40000838),
+    # FINGER_ROT: PA0(USER 버튼)은 GPIO 입력으로 이미 점유돼 있어 대신 사용.
+    # main.c의 MOTOR_FINGER_ROT(id 10)와 동일 핀 — fingerTable(제스처 그룹)에는
+    # 속하지 않는 개별 서보라서 'main.c 반영' 자동 패치는 못 찾고 수동 반영 안내만 뜸.
+    ("FINGER_ROT", "PB8", "&htim4", "TIM_CHANNEL_3", 0x4000083C),
 ]
 
 
@@ -128,7 +132,7 @@ def status_line(idx, angle, cal):
     name, pin = FINGERS[idx][0], FINGERS[idx][1]
     o = f"{cal[idx]['open']:.0f}°" if cal[idx]["open"] is not None else "미저장"
     g = f"{cal[idx]['grip']:.0f}°" if cal[idx]["grip"] is not None else "미저장"
-    return f"[{idx + 1}/6 {name}/{pin}] 현재 {angle:6.1f}°   OPEN={o}  GRIP={g}"
+    return f"[{idx + 1}/{len(FINGERS)} {name}/{pin}] 현재 {angle:6.1f}°   OPEN={o}  GRIP={g}"
 
 
 def patch_main_c(cal):
@@ -197,12 +201,12 @@ def main():
                 o = cal[idx]["open"]
                 if o is not None and abs(o - angles[idx]) < 5.0:
                     print("\n⚠ OPEN과 GRIP이 거의 같음 — 두 자세는 서로 달라야 손이 움직입니다")
-            elif k in "123456":
+            elif k in "1234567":
                 idx = int(k) - 1
             elif k == "n":
-                idx = (idx + 1) % 6
+                idx = (idx + 1) % len(FINGERS)
             elif k == "p":
-                idx = (idx - 1) % 6
+                idx = (idx - 1) % len(FINGERS)
             elif k == "h":
                 for i, f in enumerate(FINGERS):
                     a = cal[i]["open"] if cal[i]["open"] is not None else angles[i]

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1783878913475,
+  "lastScanned": 1788425208246,
   "projectRoot": "/Users/ijaejun/Documents/PlatformIO/Projects/UART_STM32",
   "techStack": {
     "languages": [],
@@ -38,7 +38,7 @@
       "path": "Drivers",
       "purpose": null,
       "fileCount": 1,
-      "lastAccessed": 1783878913459,
+      "lastAccessed": 1788425208231,
       "keyFiles": [
         "AGENTS.md"
       ]
@@ -47,7 +47,7 @@
       "path": "docs",
       "purpose": "Documentation",
       "fileCount": 2,
-      "lastAccessed": 1783878913459,
+      "lastAccessed": 1788425208231,
       "keyFiles": [
         "AGENTS.md",
         "FREERTOS_GUIDE.md"
@@ -57,7 +57,7 @@
       "path": "include",
       "purpose": null,
       "fileCount": 6,
-      "lastAccessed": 1783878913460,
+      "lastAccessed": 1788425208232,
       "keyFiles": [
         "AGENTS.md",
         "FreeRTOSConfig.h",
@@ -70,7 +70,7 @@
       "path": "lib",
       "purpose": "Library code",
       "fileCount": 2,
-      "lastAccessed": 1783878913461,
+      "lastAccessed": 1788425208232,
       "keyFiles": [
         "AGENTS.md",
         "README"
@@ -80,7 +80,7 @@
       "path": "src",
       "purpose": "Source code",
       "fileCount": 6,
-      "lastAccessed": 1783878913461,
+      "lastAccessed": 1788425208232,
       "keyFiles": [
         "AGENTS.md",
         "UART_STM32.code-workspace",
@@ -93,18 +93,34 @@
       "path": "test",
       "purpose": "Test files",
       "fileCount": 2,
-      "lastAccessed": 1783878913461,
+      "lastAccessed": 1788425208232,
       "keyFiles": [
         "AGENTS.md",
         "README"
+      ]
+    },
+    "tools": {
+      "path": "tools",
+      "purpose": null,
+      "fileCount": 2,
+      "lastAccessed": 1788425208232,
+      "keyFiles": [
+        "calibrate.py",
+        "hand.py"
       ]
     }
   },
   "hotPaths": [
     {
       "path": "src/main.c",
-      "accessCount": 28,
-      "lastAccessed": 1783881966668,
+      "accessCount": 29,
+      "lastAccessed": 1788425274718,
+      "type": "file"
+    },
+    {
+      "path": "tools/calibrate.py",
+      "accessCount": 8,
+      "lastAccessed": 1788425407450,
       "type": "file"
     },
     {
@@ -123,12 +139,6 @@
       "path": "README.md",
       "accessCount": 3,
       "lastAccessed": 1783879315259,
-      "type": "file"
-    },
-    {
-      "path": "tools/calibrate.py",
-      "accessCount": 3,
-      "lastAccessed": 1783883043028,
       "type": "file"
     },
     {
