@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"grep -n \\\"USART\\\\|huart\\\\|HAL_UART\\\\|uartRx\\\" /Users/ijaejun/Documents/PlatformIO/Projects/UART_STM32/src/main.c | head -40; echo ===; grep -n \\\"USART\\\\|huart\\\" /Users/ijaejun/Documents/Pl...",
+  "error": "Exit code 1\n93:UART_HandleTypeDef huart1;\r\n98:static uint8_t       uartRxByte;   /* HAL_UART_Receive_IT 1바이트 수신 버퍼 */\r\n99:static UartRxState_t uartRxState = UART_RX_WAIT_HEADER;\r\n100:static uint8_t       uartRxMotorId;\r\n101:static uint8_t       uartRxAngleH;\r\n102:static uint8_t       uartRxAngleL;\r\n112:static void     MX_USART1_UART_Init(void);\r\n155:  MX_USART1_UART_Init();\r\n190:  if (HAL_UART_Receive_IT(&huart1, &uartRxByte, 1) != HAL_OK)\r\n450:static void MX_USART1_UART_Init(void)\r\n455:  __HAL_...",
+  "timestamp": "2026-07-12T18:11:49.638Z",
+  "retry_count": 1
+}

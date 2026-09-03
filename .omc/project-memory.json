@@ -1,0 +1,148 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1783878913475,
+  "projectRoot": "/Users/ijaejun/Documents/PlatformIO/Projects/UART_STM32",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "docs",
+      "lib",
+      "src",
+      "test"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "Drivers": {
+      "path": "Drivers",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1783878913459,
+      "keyFiles": [
+        "AGENTS.md"
+      ]
+    },
+    "docs": {
+      "path": "docs",
+      "purpose": "Documentation",
+      "fileCount": 2,
+      "lastAccessed": 1783878913459,
+      "keyFiles": [
+        "AGENTS.md",
+        "FREERTOS_GUIDE.md"
+      ]
+    },
+    "include": {
+      "path": "include",
+      "purpose": null,
+      "fileCount": 6,
+      "lastAccessed": 1783878913460,
+      "keyFiles": [
+        "AGENTS.md",
+        "FreeRTOSConfig.h",
+        "README",
+        "main.h",
+        "stm32f4xx_hal_conf.h"
+      ]
+    },
+    "lib": {
+      "path": "lib",
+      "purpose": "Library code",
+      "fileCount": 2,
+      "lastAccessed": 1783878913461,
+      "keyFiles": [
+        "AGENTS.md",
+        "README"
+      ]
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 6,
+      "lastAccessed": 1783878913461,
+      "keyFiles": [
+        "AGENTS.md",
+        "UART_STM32.code-workspace",
+        "main.c",
+        "stm32f4xx_hal_msp.c",
+        "stm32f4xx_it.c"
+      ]
+    },
+    "test": {
+      "path": "test",
+      "purpose": "Test files",
+      "fileCount": 2,
+      "lastAccessed": 1783878913461,
+      "keyFiles": [
+        "AGENTS.md",
+        "README"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "src/main.c",
+      "accessCount": 28,
+      "lastAccessed": 1783881966668,
+      "type": "file"
+    },
+    {
+      "path": "src/stm32f4xx_it.c",
+      "accessCount": 5,
+      "lastAccessed": 1783880843496,
+      "type": "file"
+    },
+    {
+      "path": "run.txt",
+      "accessCount": 5,
+      "lastAccessed": 1783882301593,
+      "type": "file"
+    },
+    {
+      "path": "README.md",
+      "accessCount": 3,
+      "lastAccessed": 1783879315259,
+      "type": "file"
+    },
+    {
+      "path": "tools/calibrate.py",
+      "accessCount": 3,
+      "lastAccessed": 1783883043028,
+      "type": "file"
+    },
+    {
+      "path": "tools/hand.py",
+      "accessCount": 2,
+      "lastAccessed": 1783880148426,
+      "type": "file"
+    },
+    {
+      "path": "src/stm32f4xx_hal_msp.c",
+      "accessCount": 2,
+      "lastAccessed": 1783880870938,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}
